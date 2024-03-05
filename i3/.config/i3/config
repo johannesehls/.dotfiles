@@ -43,11 +43,11 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-#exec --no-startup-id pulseaudio
-#exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
+#exec --no-startup-id volumeicon
+#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+exec --no-startup-id pulseaudio
+exec --no-startup-id pa-applet
+bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
 
@@ -272,9 +272,10 @@ mode "resize" {
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
-        # exit resize mode: Enter or Escape
+        # exit resize mode: Enter or Escape or mod+r again.
         bindsym Return mode "default"
         bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
 }
 
 # Lock screen
@@ -426,3 +427,10 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+#############################
+###     Own mappings:     ###
+#############################
+
+# flameshot.
+bindsym $mod+p exec flameshot gui

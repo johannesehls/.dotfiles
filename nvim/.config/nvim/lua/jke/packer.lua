@@ -86,4 +86,13 @@ use('ThePrimeagen/vim-be-good')
 -- Git: diff, blame, etc.
   use("lewis6991/gitsigns.nvim")
 
+-- Codeium: AI code completion
+  use {
+    "Exafunction/codeium.nvim",
+    requires = {
+        "nvim-lua/plenary.nvim",
+        "hrsh7th/nvim-cmp",
+    }
+  }
+
 end)

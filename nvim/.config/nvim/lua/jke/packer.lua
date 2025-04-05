@@ -95,4 +95,11 @@ use('ThePrimeagen/vim-be-good')
     }
   }
 
+-- LaTeX plugin
+  use {
+    "lervag/vimtex",
+    lazy = false,     -- Ensure it loads immediately
+    -- tag = "v2.15",   -- uncomment to pin to a specific release
+  }
+
 end)

@@ -19,16 +19,19 @@ set adjust-open "best-fit"
 # One page per row by default
 set pages-per-row 1
 
-#stop at page boundries
+# stop at page boundaries
 set scroll-page-aware "true"
 set scroll-full-overlap 0.01
 set scroll-step 100
 
-#zoom settings
+# zoom settings
 set zoom-min 10
 set guioptions ""
 
 set font "FiraCode 15"
+
+# Try to fix problem with mixed page layouts
+set page-padding 0
 
 # zathurarc-dark
 set notification-error-bg       "#586e75" # base01  # seem not work
@@ -57,8 +60,14 @@ set inputbar-fg                 "#eee8d5" # base2
 set statusbar-bg                "#073642" # base02
 set statusbar-fg                "#93a1a1" # base1
 
-set highlight-color             "#657b83" # base00  # hightlight match when search keyword(vim's /)
-set highlight-active-color      "#268bd2" # blue
+#set highlight-color             "#657b83" # base00  # hightlight match when search keyword(vim's /)
+#set highlight-active-color      "#268bd2" # blue
+
+# Use reduced opacity in rgba versions to let the text be readyble if highlighted.
+#set highlight-color "rgba(101, 123, 131, 0.3)" # base00 with 50% opacity
+#set highlight-active-color "rgba(38, 139, 210, 0.3)" # blue with 50% opacity
+set highlight-color "rgba(209, 139, 71, 0.3)" # base00 with 50% opacity
+set highlight-active-color "rgba(244, 162, 97, 0.3)" # blue with 50% opacity
 
 set default-bg                  "#073642" # base02
 set default-fg                  "#93a1a1" # base1

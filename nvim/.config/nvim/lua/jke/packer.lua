@@ -83,4 +83,7 @@ use('ThePrimeagen/vim-be-good')
 --  use("eandrju/cellular-automaton.nvim")
 --  use("laytan/cloak.nvim")
 
+-- Git: diff, blame, etc.
+  use("lewis6991/gitsigns.nvim")
+
 end)

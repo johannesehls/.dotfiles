@@ -75,7 +75,9 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
---
+
+use('ThePrimeagen/vim-be-good')
+
 --  use("folke/zen-mode.nvim")
 --  use("github/copilot.vim")
 --  use("eandrju/cellular-automaton.nvim")

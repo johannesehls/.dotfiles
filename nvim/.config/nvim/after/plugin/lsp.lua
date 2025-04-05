@@ -4,7 +4,7 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
   'asm_lsp',
-  --'awk_ls',
+  'awk_ls',
   'bashls',
   'clangd',
   'cmake',
@@ -13,7 +13,7 @@ lsp.ensure_installed({
   'dockerls',
   'eslint',
   'gopls',
-  --'grammarly',
+  'grammarly',
   --'hls',
   'html',
   'htmx',
@@ -23,12 +23,10 @@ lsp.ensure_installed({
   'ltex',
   'lua_ls',
   'neocmake',
-  --'phpactor',
-  'ruby_ls',
   'rust_analyzer',
   'sqlls',
-  'tsserver',
-  'vimls',
+  'ts_ls', -- typescript-language-server
+  'vimls'
 })
 
 -- Fix Undefined global 'vim'

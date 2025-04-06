@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Run this script from the root of the repo
+# -> The option -D can be used to remove the symlinks created by stow
+
+
+# Check if option -D is passed
+stowing="true"
+if [ "$1" == "-D" ]; then
+    echo "*** 'install'-script started with option '-D'. Removing symlinks... ***"
+    stowing="false"
+else
+    echo "*** 'install'-script started. Creating symlinks... ***"
+fi
+echo ""
+
+# For each directory, stow it
+for dir in *; do
+    if [ -d "$dir" ]; then
+        echo "  Stowing $dir..."
+        stow -D "$dir"
+        if [ "$stowing" == "true" ]; then
+            stow "$dir"
+        fi
+    fi
+done
+
+echo ""
+echo "*** Done! ***"
